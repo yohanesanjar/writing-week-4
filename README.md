@@ -48,7 +48,23 @@
 <br>![melakukan commit](https://user-images.githubusercontent.com/100120189/192085457-0023f22a-85f2-4f71-93b5-2163fb484d81.png)
 
 ### Merge pada Git
-
+1. User membuat repository baru.
+   <br>![buat repository](https://user-images.githubusercontent.com/100120189/195994981-cce86eee-6dc2-4273-bea9-125103f189e7.png)
+2. melakukan cloning ke local computer/laptop
+   <br>![melakukan cloning](https://user-images.githubusercontent.com/100120189/195995098-b9ef2941-a761-4a4e-90a4-f77909e0c3eb.png)
+3. User membuat branch baru kemudian masuk ke branch tersebut dengan command `git branch nama_branch` kemudian `git checkout nama_branch`
+   <br>![buat branch](https://user-images.githubusercontent.com/100120189/195995682-86a89ed9-661b-4e9b-9644-d9c411836721.png)
+4. User melakukan pull branch main ke branch user, dengan command `git pull origin nama_branch_user`
+   <br>![melakukan pull ke branch user](https://user-images.githubusercontent.com/100120189/195996160-9a80d42a-af18-4ddf-9e45-9d1eac0488ea.png)
+5. User membuat file baru
+   <br>![membuat file baru](https://user-images.githubusercontent.com/100120189/195995240-bc5c1f16-e998-4dc6-b823-b924d7b906d5.png)
+6. User melakukan push ke branch user, dengan command `git push origin nama_branch_user`. Sebelum melakukan push pastikan sudah melakukan add dan juga commit.
+   <br>![Melakukan Push](https://user-images.githubusercontent.com/100120189/195996362-92ed9037-d442-4e37-9307-d0b311f7e470.png)
+7. Buka Github, kemudian user melakukan pull request ke branch main.
+   <br>![melakukan pull request](https://user-images.githubusercontent.com/100120189/195996473-87c43e32-e047-4c13-859f-196ac8d4bf73.png)
+8. Kemudian lakukan merge pull request agar file dari branch user bisa berada di branch main.
+   <br>![melakukan merge](https://user-images.githubusercontent.com/100120189/195996559-85075d8c-df9c-4320-b141-0e1479ed9fd0.png)
+   <br>![file berhasil ditambahkan ke branch main](https://user-images.githubusercontent.com/100120189/195996593-18c90437-dc12-4ad0-919f-df24b1e75370.png)
 
 ### Mempublish aplikasi ke Github
 1. Membuat repository di github
@@ -71,3 +87,15 @@
 <br>![cek file](https://user-images.githubusercontent.com/100120189/192086750-587dcadb-f217-44c6-8e50-3d69a939c724.png)
 
 ### Github Kolaborasi
+Kita meisalkan ada user A dan user B, dan user A sebagai ketuanya.
+1. User A membuat repository baru, kemudian menambahkan user B untuk collaborator dengan cara pergi ke settings > collaborators > tambahkan teman 
+   <br>![Menambahkan teman](https://user-images.githubusercontent.com/100120189/195998279-c3b9044c-f28b-44ed-8cc2-6d0211bff46f.png)
+2. User A dan user B membuat branch masing-masing, dengan command `git branch nama_branch`, kemudian masing-masing user pindah ke branch baru yang dibikin dengan command `git checkout nama_branch`
+3. User A dan user B melakukan pull masing ke dalam branch masing-masing di local computer/laptop, dengan command `git pull origin main`
+4. Misalkan user A ingin menambahkan file, maka user A membuat file terlebih dahulu, kemudian di push di branch user A, dengan command `git push origin nama_branch`
+5. User kemudian user A melakukan pull request dan merge ke branch main, dengan cara yang sudah dijelaskan di materi sebelumnya.
+6. Jika user B igin menambahkan file, maka user harus melakukan pull request kembali, agar nanti tidak ada error atau kesalahan.
+7. Kemudian user B bisa melakukan push ke dalam branch nya.
+8. User B kemudian melakukan pull request.
+9. User B tidak perlu melakukan merge, dan yang melakukan merge adalah user A karena dia adalah pemimpinnya.
+10. Ulangi dari langkah ke-4.
