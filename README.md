@@ -1,7 +1,82 @@
 # Yohanes Anjar Dewantara - Back End
 # writing-week-4
 
+## Asynchronus Javascript 
+###	Async await
+- Apa itu?
+  - Merupakan cara lain untuk menangkap objek promise. Fitur ini mempermudah kita dalam menangani proses asynchronous.Async/Await merupakan sebuah syntax khusus yang digunakan untuk menangani Promise agar penulisan code lebih efisien dan rapih.
+  - Contoh 
+     ```JavaScript 
+     const getAllUser = async ()=> {
+	 const data = await getUser()
+	 console.log(data)
+     }
+     ```
+  - Contoh menjalankan code promise dengan menggunakan async Await 
+    ```JavaScript 
+    Let nonton = (kondisi) => {
+        Return new Promise((resolve, reject) => {
+            If (kondisi == “jalan”) {
+                Resolve(“nonton terpenuhi”)
+            } reject(“batal nonton”)
+        })
+    }
 
+    Async function asyncNonton() {
+        Try {
+            Let result = await nonton()
+            Console.log(result);
+        } catch (error) {
+            Console.log(“error”)
+        }
+    } 
+    asyncNonton ()
+    ```
+- Error Handling 
+  - Untuk menghandle error  Async/Await kita dapat menggunakan try catch di dalam function yang kita buat, sehingga jika terjadi error kita dapat menangkap errornya dalam block catch.
+  - Contoh
+    ```JavaScript 
+    const getAllUser = async ()=> {
+	    try {
+		    const result = await getUser()
+		    console.log(result)
+	    } catch (error) {
+		    console.log(error)
+	    }
+    }
+    ```
+- Fetch
+  - Apa itu fetch?
+    > Fetch gunakan untuk mengambil data dan menampilkan data ke browser. Berfungsi untuk web dinamis yang datanya selalu berubah. Berikut merupakan ilustrasi mengenai fetch data api.  
+  - Mengambil data API menggunakan fetch
+    ```JavaScript
+    fetch("https://digimon-api.vercel.app/api/digimon")
+    .then(result => result.json())
+    .then(result => {
+        console.log(result)
+    })
+    ```
+  - Menampilkan data API dalam web 
+    ```JavaScript 
+    listDigimon = document.getElementById("list-digimon")
+
+    let getDataDigimon = async () => {
+        let URL = "https://digimon-api.vercel.app/api/digimon"
+        let response = await fetch(URL)
+        let digimons = await response.json()
+
+        // menampilkan 10 data digimon
+        digimons.slice(0, 10).forEach((item, index) => {
+            listDigimon.innerHTML += 
+            `<div>
+                <img src="${item.img}" alt="" width="200">
+                <h3>${item.name}</h3>
+             </div>`
+        })
+    }
+
+    getDataDigimon()
+    ```
 ## Git dan GitHub
 
 
